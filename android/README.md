@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:readabilityscore-api:1.1.13'
+    implementation 'com.github.apiverve:readabilityscore-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ TextReadabilityScoreAPIClient client = new TextReadabilityScoreAPIClient("YOUR_A
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "");
+    parameters.put("text", "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another.");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
