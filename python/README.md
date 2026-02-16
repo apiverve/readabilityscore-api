@@ -233,8 +233,9 @@ from apiverve_textreadabilityscore.apiClient import ReadabilityscoreAPIClient
 
 api = ReadabilityscoreAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another." }
+
 try:
-    query = { "text": "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another." }
     result = api.execute(query)
     print(result)
 finally:
