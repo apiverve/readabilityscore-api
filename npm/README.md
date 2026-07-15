@@ -139,7 +139,9 @@ async function makeRequest() {
     "readabilityText": {
       "fleschReadingEase": "very confusing",
       "daleChallReadabilityScore": "average 13th to 15th-grade (college) student"
-    }
+    },
+    "averageGradeLevel": 22.7,
+    "targetAudience": "post-graduate"
   }
 }
 ```
