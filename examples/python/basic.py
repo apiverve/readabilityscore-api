@@ -14,14 +14,20 @@ API_URL = 'https://api.apiverve.com/v1/readabilityscore'
 
 def call_readabilityscore_api():
     """
-    Make a GET request to the Text Readability Score API
+    Make a POST request to the Text Readability Score API
     """
     try:
+        # Request body
+        request_body &#x3D; {
+    &#x27;text&#x27;: &#x27;Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another.&#x27;
+}
+
         headers = {
-            'x-api-key': API_KEY
+            'x-api-key': API_KEY,
+            'Content-Type': 'application/json'
         }
 
-        response = requests.get(API_URL, headers=headers)
+        response = requests.post(API_URL, headers=headers, json=request_body)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
