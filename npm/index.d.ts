@@ -4,39 +4,53 @@ declare module '@apiverve/readabilityscore' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface readabilityscoreResponse {
     status: string;
     error: string | null;
     data: TextReadabilityScoreData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface TextReadabilityScoreData {
-      textCounts:      TextCounts;
-      readability:     Readability;
-      readabilityText: ReadabilityText;
+      textCounts:        TextCounts;
+      readability:       Readability;
+      readabilityText:   ReadabilityText;
+      averageGradeLevel: number | null;
+      targetAudience:    null | string;
   }
   
   interface Readability {
-      fleschReadingEase:         number;
-      fleschKincaidGrade:        number;
-      gunningFog:                number;
-      colemanLiauIndex:          number;
-      smogIndex:                 number;
-      automatedReadabilityIndex: number;
-      daleChallReadabilityScore: number;
+      fleschReadingEase:         number | null;
+      fleschKincaidGrade:        number | null;
+      gunningFog:                number | null;
+      colemanLiauIndex:          number | null;
+      smogIndex:                 number | null;
+      automatedReadabilityIndex: number | null;
+      daleChallReadabilityScore: number | null;
   }
   
   interface ReadabilityText {
-      fleschReadingEase:         string;
-      daleChallReadabilityScore: string;
+      fleschReadingEase:         null | string;
+      daleChallReadabilityScore: null | string;
   }
   
   interface TextCounts {
-      syllableCount: number;
-      lexiconCount:  number;
-      sentenceCount: number;
+      syllableCount: number | null;
+      lexiconCount:  number | null;
+      sentenceCount: number | null;
   }
 
   export default class readabilityscoreWrapper {
