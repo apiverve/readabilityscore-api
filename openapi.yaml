@@ -59,6 +59,8 @@ paths:
                   readabilityText:
                     fleschReadingEase: very confusing
                     daleChallReadabilityScore: average 13th to 15th-grade (college) student
+                  averageGradeLevel: 22.7
+                  targetAudience: post-graduate
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':
