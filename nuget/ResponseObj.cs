@@ -25,6 +25,9 @@ namespace APIVerve.API.TextReadabilityScore
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -37,30 +40,36 @@ namespace APIVerve.API.TextReadabilityScore
 
         [JsonProperty("readabilityText")]
         public ReadabilityText ReadabilityText { get; set; }
+
+        [JsonProperty("averageGradeLevel")]
+        public double? AverageGradeLevel { get; set; }
+
+        [JsonProperty("targetAudience")]
+        public string TargetAudience { get; set; }
     }
 
     public partial class Readability
     {
         [JsonProperty("fleschReadingEase")]
-        public double FleschReadingEase { get; set; }
+        public double? FleschReadingEase { get; set; }
 
         [JsonProperty("fleschKincaidGrade")]
-        public double FleschKincaidGrade { get; set; }
+        public double? FleschKincaidGrade { get; set; }
 
         [JsonProperty("gunningFog")]
-        public double GunningFog { get; set; }
+        public double? GunningFog { get; set; }
 
         [JsonProperty("colemanLiauIndex")]
-        public double ColemanLiauIndex { get; set; }
+        public double? ColemanLiauIndex { get; set; }
 
         [JsonProperty("smogIndex")]
-        public double SmogIndex { get; set; }
+        public double? SmogIndex { get; set; }
 
         [JsonProperty("automatedReadabilityIndex")]
-        public double AutomatedReadabilityIndex { get; set; }
+        public double? AutomatedReadabilityIndex { get; set; }
 
         [JsonProperty("daleChallReadabilityScore")]
-        public long DaleChallReadabilityScore { get; set; }
+        public long? DaleChallReadabilityScore { get; set; }
     }
 
     public partial class ReadabilityText
@@ -75,12 +84,24 @@ namespace APIVerve.API.TextReadabilityScore
     public partial class TextCounts
     {
         [JsonProperty("syllableCount")]
-        public long SyllableCount { get; set; }
+        public long? SyllableCount { get; set; }
 
         [JsonProperty("lexiconCount")]
-        public long LexiconCount { get; set; }
+        public long? LexiconCount { get; set; }
 
         [JsonProperty("sentenceCount")]
-        public long SentenceCount { get; set; }
+        public long? SentenceCount { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
