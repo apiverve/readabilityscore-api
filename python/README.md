@@ -1,13 +1,12 @@
 Text Readability Score API
 ============
 
-Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.
+Text Readability Score calculates the readability score and grade level of any text across standard formulas. It returns Flesch Reading Ease, Gunning Fog, Coleman-Liau, syllable and word counts, an average grade level, and a target audience label.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-textreadabilityscore.svg)](https://pypi.org/project/apiverve-textreadabilityscore/)
+
+This is a Python wrapper for the [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-textreadabilityscore
 
 ## Configuration
 
-Before using the readabilityscore API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Text Readability Score API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -60,7 +59,7 @@ except Exception as e:
 
 ## Usage
 
-The Text Readability Score API documentation is found here: [https://docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore?utm_source=pypi&utm_medium=readme).
+The Text Readability Score API documentation is found here: [https://docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -119,7 +118,9 @@ print(result)
     "readabilityText": {
       "fleschReadingEase": "very confusing",
       "daleChallReadabilityScore": "average 13th to 15th-grade (college) student"
-    }
+    },
+    "averageGradeLevel": 22.7,
+    "targetAudience": "post-graduate"
   }
 }
 ```
@@ -247,7 +248,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -258,12 +259,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
