@@ -2,9 +2,10 @@ openapi: 3.0.4
 info:
   title: Text Readability Score
   description: >-
-    Readability Score is a simple tool for calculating the readability score of
-    text. It returns the readability score based on various readability
-    formulas.
+    Text Readability Score calculates the readability score and grade level of
+    any text across standard formulas. It returns Flesch Reading Ease, Gunning
+    Fog, Coleman-Liau, syllable and word counts, an average grade level, and a
+    target audience label.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +20,7 @@ servers:
 paths:
   /v1/readabilityscore:
     post:
-      summary: Calculate Readability Score
+      summary: Text Readability Score
       description: Calculate the readability score of text
       operationId: readabilityscore
       parameters: []

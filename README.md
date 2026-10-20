@@ -1,13 +1,13 @@
-# [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.
+Text Readability Score calculates the readability score and grade level of any text across standard formulas. It returns Flesch Reading Ease, Gunning Fog, Coleman-Liau, syllable and word counts, an average grade level, and a target audience label.
 
 The Text Readability Score API provides a simple, reliable way to integrate text readability score functionality into your applications. Built for developers who need production-ready text readability score capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-POST-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -167,7 +167,7 @@ go get github.com/apiverve/readabilityscore-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -197,11 +197,47 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Text Readability Score API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "textCounts": {
+      "syllableCount": 82,
+      "lexiconCount": 49,
+      "sentenceCount": 1
+    },
+    "readability": {
+      "fleschReadingEase": 13.28,
+      "fleschKincaidGrade": 23.6,
+      "gunningFog": 26.95,
+      "colemanLiauIndex": 13.19,
+      "smogIndex": 22.08,
+      "automatedReadabilityIndex": 27.8,
+      "daleChallReadabilityScore": 17
+    },
+    "readabilityText": {
+      "fleschReadingEase": "very confusing",
+      "daleChallReadabilityScore": "average 13th to 15th-grade (college) student"
+    },
+    "averageGradeLevel": 22.7,
+    "targetAudience": "post-graduate"
+  }
 }
 ```
 
@@ -209,7 +245,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
