@@ -1,13 +1,12 @@
-TextReadabilityScore API
+Text Readability Score API
 ============
 
-Readability Score is a simple tool for calculating the readability score of text. It returns the readability score based on various readability formulas.
+Text Readability Score calculates the readability score and grade level of any text across standard formulas. It returns Flesch Reading Ease, Gunning Fog, Coleman-Liau, syllable and word counts, an average grade level, and a target audience label.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [TextReadabilityScore API](https://apiverve.com/marketplace/readabilityscore?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.TextReadabilityScore.svg)](https://www.nuget.org/packages/APIVerve.API.TextReadabilityScore)
+
+This is a .NET wrapper for the [Text Readability Score API](https://apiverve.com/marketplace/readabilityscore?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the readabilityscore API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the Text Readability Score API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,8 +60,8 @@ class Program
         var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
-};
+            Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+        };
 
         // Make the API call
         try
@@ -92,13 +91,13 @@ class Program
 
 ## Usage
 
-The TextReadabilityScore API documentation is found here: [https://docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore?utm_source=nuget&utm_medium=readme).
+The Text Readability Score API documentation is found here: [https://docs.apiverve.com/ref/readabilityscore](https://docs.apiverve.com/ref/readabilityscore?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-TextReadabilityScore API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+Text Readability Score API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -125,8 +124,8 @@ public class Example
         var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
-};
+            Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -157,8 +156,8 @@ public class Example
         var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
-};
+            Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -194,8 +193,8 @@ public class Example
         var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
-};
+            Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+        };
 
         try
         {
@@ -250,8 +249,8 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
-};
+            Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+        };
 
         try
         {
@@ -291,7 +290,7 @@ apiClient.AddCustomHeader("X-Custom-Header", "custom-value");
 apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+    Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -317,7 +316,7 @@ apiClient.SetLogger(message =>
 });
 
 var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+    Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -335,7 +334,7 @@ apiClient.SetMaxRetries(3);           // Retry up to 3 times (default: 0, max: 3
 apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (default: 1000ms)
 
 var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+    Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -347,7 +346,7 @@ The API client implements `IDisposable` for proper resource cleanup:
 
 ```csharp
 var queryOptions = new TextReadabilityScoreQueryOptions {
-    text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
+    Text = "Western astrology is founded on the movements and relative positions of celestial bodies such as the Sun, Moon and planets, which are analysed by their movement through signs of the zodiac (twelve spatial divisions of the ecliptic) and by their aspects (based on geometric angles) relative to one another."
 };
 
 using (var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]"))
@@ -395,7 +394,7 @@ using (var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -406,12 +405,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
