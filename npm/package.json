@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/readabilityscore",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Text Readability Score calculates the readability score and grade level of any text across standard formulas. It returns Flesch Reading Ease, Gunning Fog, Coleman-Liau, syllable and word counts, an average grade level, and a target audience label.",
   "main": "index.js",
   "types": "index.d.ts",
