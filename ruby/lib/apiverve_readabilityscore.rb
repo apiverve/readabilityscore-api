@@ -4,6 +4,6 @@ require_relative "apiverve_readabilityscore/client"
 
 module APIVerve
   module Readabilityscore
-    VERSION = "1.2.2"
+    VERSION = "1.2.4"
   end
 end
