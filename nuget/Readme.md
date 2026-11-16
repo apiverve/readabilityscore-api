@@ -372,8 +372,8 @@ using (var apiClient = new TextReadabilityScoreAPIClient("[YOUR_API_KEY]"))
       "sentenceCount": 1
     },
     "readability": {
-      "fleschReadingEase": 13.28,
-      "fleschKincaidGrade": 23.6,
+      "fleschReadingEase": 15.52,
+      "fleschKincaidGrade": 23.3,
       "gunningFog": 26.95,
       "colemanLiauIndex": 13.19,
       "smogIndex": 22.08,
