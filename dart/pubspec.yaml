@@ -1,0 +1,16 @@
+name: apiverve_readabilityscore
+description: "Text Readability Score calculates the readability score and grade level of any text across standard formulas. It returns Flesch Reading Ease, Gunning Fog, Coleman-Liau, syllable and word counts, an average grade level, and a target audience label."
+version: 1.2.6
+homepage: https://apiverve.com/marketplace/readabilityscore?utm_source=dart&utm_medium=referral&utm_content=homepage
+repository: https://github.com/apiverve/readabilityscore-api/tree/main/dart
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  http: ^1.1.0
+  http_parser: ^4.0.0
+
+dev_dependencies:
+  lints: ^3.0.0
+  test: ^1.24.0
